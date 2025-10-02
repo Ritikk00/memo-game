@@ -1,6 +1,6 @@
-// Memory game logic (Hindi comments)
 
-/* कार्ड्स के आइकन - जितने आइकन उतने पेयर बनेगे */
+
+// card icons
 const icons = ['🍎','🍌','🍇','🍓','🍒','🍍','🥝','🍉']; // 8 आइकन = 8 pairs = 16 कार्ड
 let cardValues = [];
 
@@ -12,7 +12,7 @@ const restartBtn = document.getElementById('restart');
 
 let firstCard = null;
 let secondCard = null;
-let lockBoard = false; // जब हम मैच चेक कर रहे हों तो क्लिक बंद कर दें
+let lockBoard = false; // checking the match
 let moves = 0;
 let matches = 0;
 
@@ -31,7 +31,7 @@ function initGame() {
   cardValues = [...icons, ...icons]; // duplicate to make pairs
   shuffle(cardValues);
 
-  board.innerHTML = ''; // साफ़ करें
+  board.innerHTML = ''; 
   moves = 0;
   matches = 0;
   updateStats();
